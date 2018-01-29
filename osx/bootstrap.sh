@@ -62,12 +62,12 @@ function runDots() {
     echo ""
     ./datastores.sh
 
-    # Run the misc app scripts
+    # Setup terminal with fancy fints
     echo "------------------------------"
-    echo "Setting up IDE."
+    echo "Setting up terminal."
     echo "------------------------------"
     echo ""
-    ./ide.sh
+    ./terminal.sh
 
 
     echo "------------------------------"
