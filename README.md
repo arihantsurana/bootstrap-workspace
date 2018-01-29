@@ -8,3 +8,4 @@ I am experimenting with Chocolatey as the package manager : https://chocolatey.o
 # Mac OSX
 All installation will be handled vis homebrew.
 `./osx/bootstrap.sh` contains the initial setup for osx to be prepped, and homebrew to be ready to execute the install script.
+To run entire installation run `bash ./osx/bootstrap.sh`
