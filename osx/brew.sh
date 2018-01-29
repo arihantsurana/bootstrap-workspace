@@ -159,6 +159,7 @@ brew cask install --appdir="/Applications" vlc
 brew cask install --appdir="/Applications" keybase
 brew cask install --appdir="/Applications" rstudio
 brew cask install --appdir="/Applications" postman
+brew cask install --appdir="/Applications" enpass
 
 # Install Docker, which requires virtualbox
 brew install docker
