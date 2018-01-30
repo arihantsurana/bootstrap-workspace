@@ -1,29 +1,27 @@
 #!/usr/bin/env bash
 
-# Install command-line tools using Homebrew.
-
-# Ask for the administrator password upfront.
-sudo -v
-
-# Keep-alive: update existing `sudo` time stamp until the script has finished.
-while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
-
-# Check for Homebrew,
-# Install if we don't have it
-if test ! $(which brew); then
-  echo "Installing homebrew..."
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
-
-# Make sure we’re using the latest Homebrew.
-brew update
+# Make sure brew and cask is available
+source ./brew.sh
 
 # Install fonts from https://github.com/ryanoasis/nerd-fonts to allow GBT
+brew cask install font-bitstreamverasansmono-nerd-font-mono
 
 # Install GBT from https://github.com/jtyr/gbt
+brew tap jtyr/repo
+brew install gbt
 
 # Configure your train
-
-
-# Remove outdated versions from the cellar.
-brew cleanup
+BASH_PROFILE_PATH=~/.bash_profile
+echo $BASH_PROFILE_PATH
+echo "" >> $BASH_PROFILE_PATH
+echo "" >> $BASH_PROFILE_PATH
+echo "# Setup GBT train for terminal" >> $BASH_PROFILE_PATH
+echo "" >> $BASH_PROFILE_PATH
+# Run $ brew info apache-spark to determine the Spark install location
+echo "PS1='$(gbt $?)'" >> $BASH_PROFILE_PATH
+echo "export GBT_CARS='Os, Dir, Git, Sign'" >> $BASH_PROFILE_PATH
+echo "export GBT_CAR_SIGN_USER_TEXT=''" >> $BASH_PROFILE_PATH
+echo "export GBT_RCARS='Time'" >> $BASH_PROFILE_PATH
+echo "source /usr/local/Cellar/gbt/1.1.6_1/share/gbt/themes/square_brackets_multiline" >> $BASH_PROFILE_PATH
+echo "" >> $BASH_PROFILE_PATH
+source $BASH_PROFILE_PATH

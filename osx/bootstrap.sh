@@ -16,9 +16,6 @@ function runDots() {
     ./osxprep.sh
 
     # Run the brew.sh Script
-    # For a full listing of installed formulae and apps, refer to
-    # the commented brew.sh source file directly and tweak it to
-    # suit your needs.
     echo ""
     echo "------------------------------"
     echo "Installing Homebrew along with some common formulae and apps."
@@ -27,19 +24,27 @@ function runDots() {
     echo ""
     ./brew.sh
 
+    # Setup core_brews
+    echo "------------------------------"
+    echo "Setting up core brews."
+    echo "------------------------------"
+    echo ""
+    ./core_brews.sh
+
     # Run the osx.sh Script
-    # I strongly suggest you read through the commented osx.sh
-    # source file and tweak any settings based on your personal
-    # preferences. The script defaults are intended for you to
-    # customize. For example, if you are not running an SSD you
-    # might want to change some of the settings listed in the
-    # SSD section.
     echo ""
     echo "------------------------------"
     echo "Setting sensible OSX defaults."
     echo "------------------------------"
     echo ""
     ./osx.sh
+    
+    # Setup virtualization tools
+    echo "------------------------------"
+    echo "Setting up virtualization tools."
+    echo "------------------------------"
+    echo ""
+    ./virtual.sh
     
     # Run the pydata.sh Script
     echo "------------------------------"
@@ -62,13 +67,40 @@ function runDots() {
     echo ""
     ./datastores.sh
 
-    # Setup terminal with fancy fints
+    # Setup terminal with fancy fonts
     echo "------------------------------"
     echo "Setting up terminal."
     echo "------------------------------"
     echo ""
     ./terminal.sh
 
+    # Setup chrome
+    echo "------------------------------"
+    echo "Setting up google Chrome."
+    echo "------------------------------"
+    echo ""
+    ./google_chrome.sh
+
+    # Setup spectacle
+    echo "------------------------------"
+    echo "Setting up google spectacle."
+    echo "------------------------------"
+    echo ""
+    ./spectacle.sh
+
+    # Setup ide
+    echo "------------------------------"
+    echo "Setting up various ide."
+    echo "------------------------------"
+    echo ""
+    ./ide.sh
+
+    # Setup misc apps
+    echo "------------------------------"
+    echo "Setting up misc apps."
+    echo "------------------------------"
+    echo ""
+    ./misc_apps.sh
 
     echo "------------------------------"
     echo "Completed running .dots, restart your computer to ensure all updates take effect"
