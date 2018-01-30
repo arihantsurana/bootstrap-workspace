@@ -97,6 +97,13 @@ function runDots() {
 
     # Setup misc apps
     echo "------------------------------"
+    echo "Setting up gcp."
+    echo "------------------------------"
+    echo ""
+    ./gcp.sh
+
+    # Setup misc apps
+    echo "------------------------------"
     echo "Setting up misc apps."
     echo "------------------------------"
     echo ""
