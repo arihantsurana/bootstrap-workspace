@@ -22,7 +22,7 @@ brew update
 brew upgrade --all
 
 # Install Cask
-brew install caskroom/cask/brew-cask
+brew install cask
 brew tap caskroom/versions
 
 # Remove outdated versions from the cellar.
