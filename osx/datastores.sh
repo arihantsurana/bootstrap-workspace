@@ -15,3 +15,4 @@ brew install postgresql
 brew install caskroom/cask/brew-cask
 brew cask install --appdir="/Applications" mysqlworkbench
 brew cask install --appdir="/Applications" sequel-pro
+brew cask install postico
