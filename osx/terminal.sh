@@ -4,7 +4,9 @@
 source ./brew.sh
 
 # Install fonts from https://github.com/ryanoasis/nerd-fonts to allow GBT
-brew cask install font-bitstreamverasansmono-nerd-font-mono
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/BitstreamVeraSansMono.zip
+unzip ./BitstreamVeraSansMono.zip
+mv ./*.ttf /Library/Fonts
 
 # Install GBT from https://github.com/jtyr/gbt
 brew tap jtyr/repo
