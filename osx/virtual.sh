@@ -9,6 +9,7 @@ brew cask install --appdir="/Applications" vagrant
 
 # Install Docker, which requires virtualbox
 brew install docker
+brew install docker-compose
 brew install boot2docker
 brew install kubectl
 brew install minikube
