@@ -13,3 +13,4 @@ brew install boot2docker
 brew install kubectl
 brew install minikube
 brew install kompose
+brew cask install kitematic
