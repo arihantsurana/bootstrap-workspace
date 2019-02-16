@@ -1,0 +1,2 @@
+source ./ide.sh
+
