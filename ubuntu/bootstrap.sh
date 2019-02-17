@@ -1,2 +1,5 @@
-source ./ide.sh
+sudo ./sdk.sh
+sudo ./git.sh
+sudo ./ide.sh
+sudo ./cloud.sh
 

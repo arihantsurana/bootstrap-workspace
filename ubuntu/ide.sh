@@ -7,16 +7,14 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update 
 sudo apt-get install sublime-text
 
-echo "install jdk"
-sudo apt update
-java -version
-sudo apt install openjdk-11-jre-headless
-
 # echo "install intelliJ idea"
 # wget https://download.jetbrains.com/idea/ideaIC-2018.3.4-no-jdk.tar.gz -P ~/Downloads/
 # sudo tar xf ~/Downloads/ideaIC-2018.3.4-no-jdk.tar.gz -C /opt/
-# source /opt/idea-IC-183.5429.30/bin/idea.sh
+# sudo /opt/idea-IC-183.5429.30/bin/idea.sh
 
 echo "install guake"
 sudo apt-get install guake 
+
+
+
 
