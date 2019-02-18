@@ -10,3 +10,4 @@ sudo apt install curl
 
 sudo snap install slack --classic
 
+sudo apt install torbrowser-launcher

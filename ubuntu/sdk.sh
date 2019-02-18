@@ -16,6 +16,7 @@ curl -fsSL https://get.docker.com -o get-docker.sh
 sudo groupadd docker
 sudo usermod -aG docker $USER
 sudo docker run hello-world
+chmod +x /usr/local/bin/docker-compose
 
 echo "Install minikube"
 curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
